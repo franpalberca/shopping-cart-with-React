@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-div {
+    display: grid;
+    grid-template-columns: 75vh auto;
+}
+
+.products {
+    grid-column: 1/2;
+}
+
+.cart-div {
+    grid-column: 2/3;
+}
+
+.picture {
+    width: 200px;
+    height: 250px;
+}

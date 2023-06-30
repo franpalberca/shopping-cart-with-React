@@ -1,4 +1,3 @@
-
 import './App.css'
 import { RouterPaths } from './Routes/RouterPaths.routes'
 

@@ -1,0 +1,591 @@
+{
+    "Products": [
+        {
+            "id": 1,
+            "name": "Films",
+            "img": "https://i.postimg.cc/wBVXw2W5/1200px-Sala-de-cine.jpg",
+            "items": [
+            {
+                "id": 1,
+                "nameProduct": "The Shawshank Redemption",
+                "img": "https://i.postimg.cc/s2nnvT9H/movie1.jpg",
+                "stock": true,
+                "price": 10.99
+            },
+            {
+                "id": 2,
+                "nameProduct": "The Godfather",
+                "img": "https://i.postimg.cc/TP27dzmW/movie2.jpg",
+                "stock": true,
+                "price": 9.99
+            },
+            {
+                "id": 3,
+                "nameProduct": "The Godfather: Part II",
+                "img": "https://i.postimg.cc/vZt2dY1s/movie3.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 4,
+                "nameProduct": "The Dark Knight",
+                "img": "https://i.postimg.cc/X7FDQc4X/movie4.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 5,
+                "nameProduct": "12 Angry Men",
+                "img": "https://i.postimg.cc/rwkZb0wj/movie5.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 6,
+                "nameProduct": "Schindler's List",
+                "img": "https://i.postimg.cc/tR8M3m0L/movie6.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 7,
+                "nameProduct": "The Lord of the Rings: The Return of the King",
+                "img": "https://i.postimg.cc/J7sFBCFN/movie7.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 8,
+                "nameProduct": "Pulp Fiction",
+                "img": "https://i.postimg.cc/7hJSPVmz/movie8.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 9,
+                "nameProduct": "The Good, the Bad and the Ugly",
+                "img": "https://i.postimg.cc/sXXpqyWw/movie9.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 10,
+                "nameProduct": "Fight Club",
+                "img": "https://i.postimg.cc/8CTddLz8/movie10.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 11,
+                "nameProduct": "The Lord of the Rings: The Fellowship of the Ring",
+                "img": "https://i.postimg.cc/nM8BXDPP/movie11.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 12,
+                "nameProduct": "Forrest Gump",
+                "img": "https://i.postimg.cc/nh4YQ3ZY/movie12.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 13,
+                "nameProduct": "Inception",
+                "img": "https://i.postimg.cc/SKV6gjnn/movie13.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 14,
+                "nameProduct": "Star Wars: Episode V - The Empire Strikes Back",
+                "img": "https://i.postimg.cc/y84ydMq8/movie14.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 15,
+                "nameProduct": "The Lord of the Rings: The Two Towers ",
+                "img": "https://i.postimg.cc/vBNWdjLM/movie15.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 16,
+                "nameProduct": "The Matrix",
+                "img": "https://i.postimg.cc/sDZJ3VNL/movie16.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 17,
+                "nameProduct": "Goodfellas",
+                "img": "https://i.postimg.cc/nrNYq5CT/movie17.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 18,
+                "nameProduct": "One Flew Over the Cuckoo's Nest",
+                "img": "https://i.postimg.cc/XNP8MZQF/movie18.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 19,
+                "nameProduct": "Seven Samurai",
+                "img": "https://i.postimg.cc/qqNxh0Mz/movie19.jpg",
+                "stock": true,
+                "price": 11.99
+            },
+            {
+                "id": 20,
+                "nameProduct": "Se7en",
+                "img": "https://i.postimg.cc/sX6Jg1zk/movie20.jpg",
+                "stock": true,
+                "price": 8.99
+            }
+        ]
+	},
+	{   "id": 2,
+        "name": "TV Series",
+        "img": "https://i.postimg.cc/50mfYY22/Series-TV-posters.jpg",
+        "items": [
+		{
+			"id": 1,
+			"nameProduct": "Breaking Bad",
+			"img": "https://i.postimg.cc/8CbHxt0P/serie1.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 2,
+			"nameProduct": "Chernobyl",
+			"img": "https://i.postimg.cc/rFvQ4d4c/serie2.jpg",
+			"stock": true,
+			"price": 14.99
+		},
+		{
+			"id": 3,
+			"nameProduct": "Game of Thrones",
+			"img": "https://i.postimg.cc/VLSK59dD/serie3.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 4,
+			"nameProduct": "Band of Brothers",
+			"img": "https://i.postimg.cc/y6pfVpYD/serie4.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 5,
+			"nameProduct": "The Wire",
+			"img": "https://i.postimg.cc/MHLtdHr7/serie5.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 6,
+			"nameProduct": "Planet Earth II",
+			"img": "https://i.postimg.cc/0QcVKcYH/serie6.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 7,
+			"nameProduct": "Planet Earth",
+			"img": "https://i.postimg.cc/rssQ1xgy/serie7.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 8,
+			"nameProduct": "The Sopranos",
+			"img": "https://i.postimg.cc/SsyZKwMM/serie8.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 9,
+			"nameProduct": "Rick and Morty",
+			"img": "https://i.postimg.cc/KY7qxZRb/serie9.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 10,
+			"nameProduct": "The Twilight Zone",
+			"img": "https://i.postimg.cc/52CKK5J6/serie10.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 11,
+			"nameProduct": "Friends",
+			"img": "https://i.postimg.cc/qMg5yVZc/serie11.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 12,
+			"nameProduct": "The Crown",
+			"img": "https://i.postimg.cc/FFT6YsGs/serie12.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 13,
+			"nameProduct": "Stranger Things",
+			"img": "https://i.postimg.cc/q7HbPtBQ/serie13.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 14,
+			"nameProduct": "Sherlock",
+			"img": "https://i.postimg.cc/yxpptvWS/serie14.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 15,
+			"nameProduct": "True Detective",
+			"img": "https://i.postimg.cc/8cznZqkS/serie15.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 16,
+			"nameProduct": "Fargo",
+			"img": "https://i.postimg.cc/Y93sfpHR/serie16.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 17,
+			"nameProduct": "Death Note",
+			"img": "https://i.postimg.cc/5t8GyBKZ/serie17.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 18,
+			"nameProduct": "The Office",
+			"img": "https://i.postimg.cc/Nj3SQJD6/serie18.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 19,
+			"nameProduct": "The Mandalorian",
+			"img": "https://i.postimg.cc/ZRZQdW10/serie19.jpg",
+			"stock": true,
+			"price": 12.99
+		},
+		{
+			"id": 20,
+			"nameProduct": "Black Mirror",
+			"img": "https://i.postimg.cc/htzNWWL4/serie20.jpg",
+			"stock": true,
+			"price": 11.99
+		}
+	]
+	},
+	{
+	    "id": 3,
+        "name": "Videogames",
+        "img": "https://i.postimg.cc/Qd64tXDZ/100-best-games-hp-b.jpg",
+        "items": [
+		{
+			"id": 1,
+			"nameProduct": "The Legend of Zelda: Ocarina of Time",
+			"img": "https://i.postimg.cc/7hKjDqth/game1.jpg",
+			"stock": true,
+			"price": 59.99
+		},
+		{
+			"id": 2,
+			"nameProduct": "Super Mario Bros. 3",
+			"img": "https://i.postimg.cc/tRkKFzRb/game2.jpg",
+			"stock": true,
+			"price": 39.99
+		},
+		{
+			"id": 3,
+			"nameProduct": "Tetris",
+			"img": "https://i.postimg.cc/FsK2pJ1L/game3.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 4,
+			"nameProduct": "The Legend of Zelda: Breath of the Wild",
+			"img": "https://i.postimg.cc/Zq3k3tns/game4.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 5,
+			"nameProduct": "Super Mario 64",
+			"img": "https://i.postimg.cc/MT8CmPj6/game5.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 6,
+			"nameProduct": "Minecraft",
+			"img": "https://i.postimg.cc/fR1nJTz0/game6.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 7,
+			"nameProduct": "Grand Theft Auto V",
+			"img": "https://i.postimg.cc/MH6ghnDg/game7.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 8,
+			"nameProduct": "Red Dead Redemption 2",
+			"img": "https://i.postimg.cc/VkJPfb88/game8.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 9,
+			"nameProduct": "Super Mario World",
+			"img": "https://i.postimg.cc/QxxrzyYV/game9.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 10,
+			"nameProduct": "The Elder Scrolls V: Skyrim",
+			"img": "https://i.postimg.cc/d1mzH288/game10.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 11,
+			"nameProduct": "Portal 2",
+			"img": "https://i.postimg.cc/RVszxL2d/game11.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 12,
+			"nameProduct": "Metal Gear Solid",
+			"img": "https://i.postimg.cc/sgLy74cx/game12.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 13,
+			"nameProduct": "The Last of Us",
+			"img": "https://i.postimg.cc/rsg2m1s8/game13.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 14,
+			"nameProduct": "Final Fantasy VII",
+			"img": "https://i.postimg.cc/tRzj2j5L/game14.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 15,
+			"nameProduct": "God of War",
+			"img": "https://i.postimg.cc/QtG3nNvr/game15.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 16,
+			"nameProduct": "Half-Life 2",
+			"img": "https://i.postimg.cc/B6T0W9GP/game16.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 17,
+			"nameProduct": "Halo: Combat Evolved",
+			"img": "https://i.postimg.cc/zvq18tJt/game17.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 18,
+			"nameProduct": "Chrono Trigger",
+			"img": "https://i.postimg.cc/VLYY86vf/game18.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 19,
+			"nameProduct": "Super Metroid",
+			"img": "https://i.postimg.cc/Pr2drjvm/game19.jpg",
+			"stock": true,
+			"price": 49.99
+		},
+		{
+			"id": 20,
+			"nameProduct": "Mass Effect 2",
+			"img": "https://i.postimg.cc/sgxsMN5b/game20.jpg",
+			"stock": true,
+			"price": 54.99
+		}
+	]
+	},
+	{
+	    "id": 4,
+        "name": "Music",
+        "img": "https://i.postimg.cc/65pCQCpT/Record-hp-GQ-7-Jun17-istock-b.jpg",
+        "items": [
+		{
+			"id": 1,
+			"nameProduct": "The Beatles - Sgt. Pepper's Lonely Hearts Club Band",
+			"img": "https://i.postimg.cc/0NJvfKWf/music1.png",
+			"stock": true,
+			"price": 8.99
+		},
+		{
+			"id": 2,
+			"nameProduct": "The Beach Boys - Pet Sounds",
+			"img": "https://i.postimg.cc/3NZYGMSQ/music2.jpg",
+			"stock": true,
+			"price": 7.99
+		},
+		{
+			"id": 3,
+			"nameProduct": "The Rolling Stones - Exile on Main St.",
+			"img": "https://i.postimg.cc/J08Rt7QQ/music3.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 4,
+			"nameProduct": "Bob Dylan - Highway 61 Revisited",
+			"img": "https://i.postimg.cc/GpZLwx8V/music4.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 5,
+			"nameProduct": "Marvin Gaye - What's Going On",
+			"img": "https://i.postimg.cc/fLmwwSYL/music5.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 6,
+			"nameProduct": "The Clash - London Calling",
+			"img": "https://i.postimg.cc/CKZhQQ1b/music6.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 7,
+			"nameProduct": "Bob Dylan - Blonde on Blonde",
+			"img": "https://i.postimg.cc/zG2DprJJ/music7.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 8,
+			"nameProduct": "The Beatles - Abbey Road",
+			"img": "https://i.postimg.cc/v85Bykvz/music8.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 9,
+			"nameProduct": "Nirvana - Nevermind",
+			"img": "https://i.postimg.cc/7ZZYg6rs/music9.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 10,
+			"nameProduct": "Prince and The Revolution - Purple Rain",
+			"img": "https://i.postimg.cc/9FVfQb8j/music10.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 11,
+			"nameProduct": "Michael Jackson - Thriller",
+			"img": "https://i.postimg.cc/SsMKJvbm/music11.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 12,
+			"nameProduct": "Bruce Springsteen - Born to Run",
+			"img": "https://i.postimg.cc/mrhkGrdz/music12.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 13,
+			"nameProduct": "Led Zeppelin - Led Zeppelin IV",
+			"img": "https://i.postimg.cc/vmjB8djP/music13.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 14,
+			"nameProduct": "Stevie Wonder - Songs in the Key of Life",
+			"img": "https://i.postimg.cc/vZ0Tjnvw/music14.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 15,
+			"nameProduct": "Fleetwood Mac - Rumours",
+			"img": "https://i.postimg.cc/HsGy4b6S/music15.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 16,
+			"nameProduct": "The Rolling Stones - Sticky Fingers",
+			"img": "https://i.postimg.cc/mkWgMyTC/music16.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 17,
+			"nameProduct": "David Bowie - The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+			"img": "https://i.postimg.cc/wTd1sgBZ/music17.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 18,
+			"nameProduct": "Oasis - (What's the story) Morning glory",
+			"img": "https://i.postimg.cc/CLHzGXB1/music18.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 19,
+			"nameProduct": "Pink Floyd - The Dark Side of the Moon",
+			"img": "https://i.postimg.cc/8Phrys3T/music19.jpg",
+			"stock": true,
+			"price": 9.99
+		},
+		{
+			"id": 20,
+			"nameProduct": "Queen - Greatest Hits",
+			"img": "https://i.postimg.cc/c13KHrdf/music20.jpg",
+			"stock": true,
+			"price": 10.99
+		}
+	]
+	}
+]
+}

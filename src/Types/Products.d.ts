@@ -1,3 +1,5 @@
+import { Product } from "../Components/Product/Product";
+
 export type Product = {
     id: number;
     nameProduct: string;
@@ -6,9 +8,6 @@ export type Product = {
     price: number;
 };
 
-export type CategoryProducts = {
-    id: number;
-    name: string;
-    img: string;
-    items: Product[];
-    };
+export interface CartItemProps {
+    data: Product;
+  }

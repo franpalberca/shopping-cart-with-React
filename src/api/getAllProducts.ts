@@ -1,8 +1,16 @@
-export const getAllProducts = async () => {
+import { useEffect } from 'react';
 
-    const url = 'http://localhost:300/products'
-    const response = await fetch (url)
-    const products = await response.json()
+export const getProducts = () => {
 
-    return products
-}
+    useEffect(() => {
+		const getAllProducts = async () => {
+			const url = 'http://localhost:3004';
+			const response = await fetch(url);
+			const products = await response.json();
+			console.log(products);
+        };
+
+		getAllProducts();
+	}, []);
+
+};

@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {NavigationCarousel} from '../../Components/NavigationCarousel/NavigationCarousel';
 import {ProductCard} from '../../Components/ProductCard/ProductCard';
 import {Product} from '../../Types/Products';
-
+import './mainPage.css'
 
 export const MainPage = () => {
 	const [selectedItems, setSelectedItems] = useState<Product[]>([]);
@@ -19,7 +19,7 @@ export const MainPage = () => {
 			<NavigationCarousel onItemClick={handleItemClick} />
 			<div className="products">
 				{selectedItems.map((items: Product) => (
-					<ProductCard key={items.id} items={items} /> // Pasamos 'items' en lugar de 'product'
+					<ProductCard className="product" key={items.id} items={items} />
 				))}
 			</div>
 		</div>

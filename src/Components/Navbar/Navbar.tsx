@@ -3,7 +3,7 @@ import {useContext} from 'react';
 import {ShoppingCart} from 'phosphor-react';
 import {ShopContext} from '../../config/context/ShopContext';
 import './navbar.css';
-import {LOGIN} from '../../config/routes/paths';
+import {FILTERPAGE, LOGIN, WISHLIST} from '../../config/routes/paths';
 
 export const Navbar = () => {
 	const shopContext = useContext(ShopContext);
@@ -24,9 +24,11 @@ export const Navbar = () => {
 					<ShoppingCart size={35} />
 					{totalCartItems > 0 && <span className="cartItemCount">{totalCartItems}</span>}
 				</Link>
+                <Link to={FILTERPAGE}>Filter</Link>
                 </div>
                 <div className="links-right">
 				<Link to={LOGIN}>Login</Link>
+                <Link to={WISHLIST}>Wishlist</Link>
 			</div>
             </div>
 		</div>

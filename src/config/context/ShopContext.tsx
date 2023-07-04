@@ -16,6 +16,8 @@ const getDefaultCart = () => {
 export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 	const [cartItems, setCartItems] = useState(getDefaultCart());
 
+	const [wishlistItems, setWishlistItems] = useState<number[]>([]);
+
 	const getTotalCartAmount = () => {
 		let totalAmount = 0;
 		for (const item in cartItems) {
@@ -59,6 +61,14 @@ export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 		}
 	};
 
+	const addToWishlist = (itemId: number) => {
+		setWishlistItems((prevItems) => [...prevItems, itemId]);
+	};
+
+	const removeFromWishlist = (itemId: number) => {
+		setWishlistItems((prevItems) => prevItems.filter((item) => item !== itemId));
+	};
+
 	const checkout = () => {
 		setCartItems(getDefaultCart());
 	};
@@ -70,6 +80,9 @@ export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 		removeFromCart,
 		getTotalCartAmount,
 		checkout,
+		wishlistItems,
+		addToWishlist,
+		removeFromWishlist,
 	};
 
 	return <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>;

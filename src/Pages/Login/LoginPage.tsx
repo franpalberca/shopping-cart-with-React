@@ -2,7 +2,7 @@ import {FC, ReactNode, useState} from 'react';
 import {useAuthContext} from '../../config/context/AuthContext';
 import {MAGIC_WORD} from '../../consts/magicWord';
 
-export const Login: FC<ReactNode> = () => {
+export const LoginPage: FC<ReactNode> = () => {
 	const {login} = useAuthContext();
 	const [magicWord, setMagicWord] = useState('');
 

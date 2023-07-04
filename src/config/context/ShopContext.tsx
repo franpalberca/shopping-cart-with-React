@@ -1,5 +1,5 @@
 import {createContext, useState} from 'react';
-import PRODUCTS from '../../assets/db/db.json';
+import PRODUCTS from '../../../db.json';
 import {Product} from '../../Types/Products';
 import {ShopContextValue} from '../../Types/ShopContext';
 

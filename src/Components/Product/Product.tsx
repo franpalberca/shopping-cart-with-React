@@ -1,34 +1,31 @@
 import {useContext} from 'react';
-import {ShopContext} from '../../config/context/ShopContext';
-import {ShopContextValue} from '../../Types/ShopContext';
-import {CartItemProps} from '../../Types/Products';
+import { ShopContext } from '../../config/context/ShopContext';
+import { ShopContextValue } from '../../Types/ShopContext';
+import { CartItemProps } from '../../Types/Products';
+
 
 export const Product = (props: CartItemProps) => {
 	const {id, nameProduct, price, img} = props.data;
-	const {cartItems, addToCart, removeFromCart, updateCartItemCount} = useContext<ShopContextValue>(ShopContext);
+	const shopContext = useContext<ShopContextValue | null>(ShopContext);
+	if (!shopContext || !shopContext.cartItems || !shopContext.addToCart || !shopContext.removeFromCart || !shopContext.updateCartItemCount) {
+		return null;
+	}
+	const {cartItems, addToCart} = shopContext;
 
-	const cartItemCount = cartItems[id] || 0;
+	const cartItemCount = cartItems[id];
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const newAmount = Number(e.target.value);
-		if (!isNaN(newAmount)) {
-			updateCartItemCount(newAmount, id);
-		}
-	};
 	return (
-		<div className="cartItem">
-			<img src={img} alt={nameProduct} />
+		<div className="product">
+			<img src={img} />
 			<div className="description">
 				<p>
 					<b>{nameProduct}</b>
 				</p>
-				<p> Price: ${price}</p>
-				<div className="countHandler">
-					<button onClick={() => removeFromCart(id)}> - </button>
-					<input value={cartItemCount} onChange={handleInputChange} />
-					<button onClick={() => addToCart(id)}> + </button>
-				</div>
+				<p> ${price}</p>
 			</div>
+			<button className="addToCartButton" onClick={() => addToCart(id)}>
+				Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+			</button>
 		</div>
 	);
 };

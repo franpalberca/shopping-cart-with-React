@@ -38,6 +38,17 @@ export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 		setCartItems(getDefaultCart());
 	}, [products]);
 
+	useEffect(() => {
+		const savedCartItems = localStorage.getItem('cartItems');
+		if (savedCartItems) {
+			setCartItems(JSON.parse(savedCartItems));
+		}
+	}, []);
+
+	useEffect(() => {
+		localStorage.setItem('cartItems', JSON.stringify(cartItems));
+	}, [cartItems]);
+
 	const getTotalCartAmount = () => {
 		let totalAmount = 0;
 		for (const item in cartItems) {
@@ -99,6 +110,7 @@ export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 	};
 
 	const contextValue: ShopContextValue = {
+		products,
 		cartItems,
 		addToCart,
 		updateCartItemCount,

@@ -1,5 +1,6 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import './checkoutpage.css';
+import { Link } from 'react-router-dom';
 
 export const CheckoutPage = () => {
 	const [formData, setFormData] = useState({
@@ -12,6 +13,22 @@ export const CheckoutPage = () => {
 		shippingOption: 'standard',
 		creditCard: '',
 	});
+
+	useEffect(() => {
+		const savedFormData = localStorage.getItem('formData');
+		if (savedFormData) {
+			const parsedFormData = JSON.parse(savedFormData);
+			setFormData((prevData) => ({
+				...prevData,
+				...parsedFormData,
+				creditCard: '',
+			}));
+		}
+	}, []);
+
+	useEffect(() => {
+		localStorage.setItem('formData', JSON.stringify(formData));
+	}, [formData]);
 
 	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const {name, value} = event.target;
@@ -93,9 +110,10 @@ export const CheckoutPage = () => {
 								<input type="text" name="creditCard" value={formData.creditCard} onChange={handleInputChange} placeholder="XXXX-XXXX-XXXX-XXXX" required />
 							</label>
 						</div>
-						<button type="submit" disabled={!isFormValid}>
+						<Link to={'/thankyoupage'}><button type="submit" disabled={!isFormValid}>
 							Pay
 						</button>
+                        </Link>
 					</div>
 				</form>
 			</div>

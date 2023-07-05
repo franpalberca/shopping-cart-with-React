@@ -1,4 +1,5 @@
 export type ShopContextValue = {
+	// products:string;
 	cartItems: {[key: number]: number};
 	addToCart: (itemId: number) => void;
 	updateCartItemCount: (newAmount: number, itemId: number) => void;

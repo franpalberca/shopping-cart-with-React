@@ -13,6 +13,7 @@ import {WishlistPage} from '../Pages/wishlist/WishlistPage';
 import { FilterPage } from '../Pages/filter/FilterPage';
 import { ProductPage } from '../Pages/product/ProductPage';
 import { CheckoutPage } from '../Pages/checkout/CheckoutPage';
+import { ThankYouPage } from '../Pages/thankyou/ThankYouPage';
 
 export const RouterPaths = () => {
 	return (
@@ -29,6 +30,7 @@ export const RouterPaths = () => {
 							<Route path={LOGIN} element={<LoginPage />} />
 							<Route path="/cart" element={<CartPage />} />
                             <Route path="/checkout" element={<CheckoutPage />} />
+                            <Route path='/thankyoupage' element={<ThankYouPage />} />
 						</Route>
 						<Route path={PRIVATE} element={<PrivateRoute />}>
 							<Route index element={<HomePage />} />

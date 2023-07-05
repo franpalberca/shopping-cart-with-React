@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
-import {Product} from '../../Components/Product/Product';
+import {ProductItem} from '../../Components/Product/Product.tsx';
 import './homepage.css';
-import {ReducerAction, ReducerState} from '../../Types/Products';
 
 const url = 'http://localhost:3004/PRODUCTS';
 
@@ -21,18 +20,6 @@ export const HomePage = () => {
 		fetchProducts();
 	}, []);
 
-	const reducer = (state: ReducerState, action: ReducerAction): ReducerState => {
-		switch (action.type) {
-			case 'FILTER_PRODUCTS':
-				const minPrice = action.payload;
-				const maxPrice = action.payload + 9;
-				const filteredProducts = state.products.filter((product) => product.price >= minPrice && product.price <= maxPrice);
-				return {...state, filteredProducts};
-			default:
-				return state;
-		}
-	};
-
 	return (
 		<div className="shop">
 			<div className="shopTitle">
@@ -41,7 +28,7 @@ export const HomePage = () => {
 
 			<div className="products">
 				{products.map((product) => (
-					<Product key={product.id} data={product} />
+					<ProductItem key={product.id} data={product} />
 				))}
 			</div>
 		</div>

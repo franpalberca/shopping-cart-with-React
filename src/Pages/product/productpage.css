@@ -1,0 +1,38 @@
+.addToCartButton {
+	background-color: transparent;
+	border: 2px solid black;
+	min-width: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+}
+
+.addToWishlistButton {
+	background-color: transparent;
+	border: 2px solid black;
+	min-width: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+}
+
+.addToCartButton:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.addToWishlistButton:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.addToWishlistButton.active {
+	color: black;
+	background-color: red;
+}

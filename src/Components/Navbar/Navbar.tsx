@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 import {useContext} from 'react';
-import {ShoppingCart} from 'phosphor-react';
+import { ShoppingCart} from 'phosphor-react';
 import {ShopContext} from '../../config/context/ShopContext';
 import './navbar.css';
 import {FILTERPAGE, LOGIN, WISHLIST} from '../../config/routes/paths';

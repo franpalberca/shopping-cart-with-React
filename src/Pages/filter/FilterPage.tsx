@@ -1,5 +1,5 @@
 import {useEffect, useReducer} from 'react';
-import {Product} from '../../Components/Product/Product';
+import {ProductItem} from '../../Components/Product/Product';
 // import './homepage.css';
 import {ReducerAction, ReducerState} from '../../Types/Products';
 
@@ -58,7 +58,7 @@ export const FilterPage = () => {
 
 			<div className="products">
 				{state.filteredProducts.map((product) => (
-					<Product key={product.id} data={product} />
+					<ProductItem key={product.id} data={product} />
 				))}
 			</div>
 		</div>

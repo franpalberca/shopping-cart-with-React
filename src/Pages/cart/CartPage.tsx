@@ -6,7 +6,7 @@ import "./cart.css";
 import { ShopContext } from "../../config/context/ShopContext";
 import { ShopContextValue } from "../../Types/ShopContext";
 
-export const Cart = () => {
+export const CartPage = () => {
   const { cartItems, getTotalCartAmount, checkout } = useContext<ShopContextValue>(ShopContext);
   const totalAmount = getTotalCartAmount();
 

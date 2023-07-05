@@ -13,6 +13,7 @@
 }
 
 .product {
+	position:relative;
 	border-radius: 15px;
 	width: 60%;
 	height: 350px;
@@ -27,8 +28,11 @@
 	text-align: center;
 }
 
-.image {
-	width: 400px;
+.product img {
+	position: relative;
+	left: 0,
+	top: 0;
+	width: 200px;
 }
 
 .title {
@@ -51,10 +55,32 @@
 	border-radius: 15px;
 }
 
+.addToWishlistButton {
+	background-color: transparent;
+	border: 2px solid black;
+	min-width: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+}
+
 .addToCartButton:hover {
 	background-color: black;
 	color: white;
 	cursor: pointer;
+}
+
+.addToWishlistButton:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.addToWishlistButton.active {
+	color: black;
+	background-color: red;
 }
 
 .filterButtons {

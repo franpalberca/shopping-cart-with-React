@@ -6,6 +6,7 @@ export type ShopContextValue = {
 	getTotalCartAmount: () => number;
 	checkout: () => void;
 	wishlistItems: number[];
+	setWishlistItems: React.Dispatch<React.SetStateAction<number[]>>;
 	addToWishlist: (itemId: number) => void;
 	removeFromWishlist: (itemId: number) => void;
 };

@@ -3,6 +3,7 @@ import {Product} from '../Components/Product/Product';
 export type Product = {
 	id: number;
 	nameProduct: string;
+    description: string,
 	img: string;
 	stock: boolean;
 	price: number;

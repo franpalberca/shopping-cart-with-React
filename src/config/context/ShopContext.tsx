@@ -19,6 +19,7 @@ export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 	const [wishlistItems, setWishlistItems] = useState<number[]>([]);
 	const [products, setProducts] = useState();
 	const url = 'http://localhost:3004/PRODUCTS';
+	
 	const fetchProducts = async () => {
 		try {
 			const response = await fetch(url);
@@ -32,12 +33,12 @@ export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 	useEffect(() => {
 		fetchProducts();
 	}, []);
+
 	const getTotalCartAmount = () => {
 		let totalAmount = 0;
 		for (const item in cartItems) {
 			if (cartItems[item] > 0) {
-				const set = new Set(PRODUCTS)
-				let itemInfo = Array.from(set).find((product: Product) => product.id === Number(item));
+				let itemInfo = products.find((product: Product) => product.id === Number(item));
 				console.log(itemInfo)
 				if (itemInfo) {
 					totalAmount += cartItems[item] * itemInfo.price;

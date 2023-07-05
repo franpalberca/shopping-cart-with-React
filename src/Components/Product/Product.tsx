@@ -19,11 +19,7 @@ export const ProductItem = (props: CartItemProps) => {
 	const isWishlistActive = wishlistItems.includes(id);
 
 	const handleAddToCart = () => {
-		if (isCartActive) {
-			removeFromCart(id);
-		} else {
-			addToCart(id);
-		}
+		addToCart(id);
 	};
 
 	const handleAddToWishlist = () => {
@@ -58,4 +54,3 @@ export const ProductItem = (props: CartItemProps) => {
 		</div>
 	);
 };
-

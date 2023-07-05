@@ -14,7 +14,7 @@ export const ProductPage = () => {
 		return <p>Product not found</p>;
 	}
 
-	const {nameProduct, price, img, stock} = product;
+	const {nameProduct, description, price, img, stock} = product;
 	const stockText = stock ? 'THERE IS STOCK' : 'SORRY, THERE IS NOT STOCK AVAILABLE AT THIS MOMENT';
 	const stockStyle = stock ? {color: 'green'} : {color: 'red'};
 
@@ -26,7 +26,7 @@ export const ProductPage = () => {
 
 	const {cartItems, addToCart, wishlistItems, addToWishlist, setWishlistItems, removeFromWishlist} = shopContext;
 	const cartItemCount = cartItems[id];
-	const isWishlistActive = wishlistItems.includes(id);
+	const isWishlistActive = wishlistItems.includes(+id);
 
 	useEffect(() => {
 		localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
@@ -38,9 +38,9 @@ export const ProductPage = () => {
 
 	const handleAddToWishlist = () => {
 		if (isWishlistActive) {
-			shopContext.removeFromWishlist(id);
+			shopContext.removeFromWishlist(+id);
 		} else {
-			shopContext.addToWishlist(id);
+			shopContext.addToWishlist(+id);
 		}
 	};
 
@@ -53,6 +53,7 @@ export const ProductPage = () => {
 			<b>
 				<p style={stockStyle}>{stockText}</p>
 			</b>
+            <p>{description}</p>
 			<button className="addToCartButton" onClick={handleAddToCart}>
 				Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
 			</button>

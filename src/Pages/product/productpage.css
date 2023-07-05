@@ -36,3 +36,11 @@
 	color: black;
 	background-color: red;
 }
+
+.productPage.outOfStock {
+	opacity: 1;
+}
+
+.productPage .outOfStockImage {
+	filter: brightness(40%);
+}

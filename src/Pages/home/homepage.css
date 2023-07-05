@@ -30,7 +30,7 @@
 
 .product img {
 	position: relative;
-	left: 0,
+	left: 0;
 	top: 0;
 	width: 200px;
 }
@@ -91,4 +91,12 @@
 
 .filterButtons button {
 	margin: 0 5px;
+}
+
+.product.outOfStock {
+	opacity: 1;
+}
+
+.product .outOfStockImage {
+	filter: brightness(40%);
 }

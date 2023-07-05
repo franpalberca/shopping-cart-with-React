@@ -5,7 +5,7 @@ import {Heart} from 'phosphor-react';
 import {Link} from 'react-router-dom';
 
 export const ProductItem = (props: CartItemProps) => {
-	const {id, nameProduct, price, img} = props.data;
+	const {id, nameProduct, price, img, stock} = props.data;
 	const shopContext = useContext(ShopContext);
 
 	if (!shopContext) {
@@ -19,7 +19,9 @@ export const ProductItem = (props: CartItemProps) => {
 	const isWishlistActive = wishlistItems.includes(id);
 
 	const handleAddToCart = () => {
-		addToCart(id);
+		if (props.data.stock) {
+			addToCart(id);
+		}
 	};
 
 	const handleAddToWishlist = () => {
@@ -35,9 +37,9 @@ export const ProductItem = (props: CartItemProps) => {
 	}, [wishlistItems]);
 
 	return (
-		<div className="product">
+		<div className={`product ${!props.data.stock ? 'outOfStock' : ''}`}>
 			<Link to={`/product/${id}`}>
-				<img src={img} alt={nameProduct} />
+				<img src={img} alt={nameProduct} className={!props.data.stock ? 'outOfStockImage' : ''} />
 			</Link>
 			<div className="description">
 				<p>
@@ -45,7 +47,7 @@ export const ProductItem = (props: CartItemProps) => {
 				</p>
 				<p>${price}</p>
 			</div>
-			<button className={`addToCartButton ${isCartActive ? 'active' : ''}`} onClick={handleAddToCart}>
+			<button className={`addToCartButton ${isCartActive ? 'active' : ''}`} onClick={handleAddToCart} disabled={!props.data.stock}>
 				Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
 			</button>
 			<button className={`addToWishlistButton ${isWishlistActive ? 'active' : ''}`} onClick={handleAddToWishlist}>

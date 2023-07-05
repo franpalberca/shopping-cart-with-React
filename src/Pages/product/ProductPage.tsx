@@ -33,8 +33,10 @@ export const ProductPage = () => {
 	}, [wishlistItems]);
 
 	const handleAddToCart = () => {
-		addToCart(id);
-	};
+		if (stock) {
+        addToCart(id);
+        }
+    };
 
 	const handleAddToWishlist = () => {
 		if (isWishlistActive) {
@@ -45,18 +47,18 @@ export const ProductPage = () => {
 	};
 
 	return (
-		<div>
-			<h2>Product Details</h2>
+		<div className={`productPage ${!stock ? 'outOfStock' : ''}`}>
+      <h2>Product Details</h2>
 			<h3>{nameProduct}</h3>
-			<img src={img} alt={nameProduct} />
+			<img src={img} alt={nameProduct} className={!stock ? 'outOfStockImage' : ''} />
 			<p>Price: ${price}</p>
 			<b>
 				<p style={stockStyle}>{stockText}</p>
 			</b>
             <p>{description}</p>
-			<button className="addToCartButton" onClick={handleAddToCart}>
-				Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
-			</button>
+			<button className="addToCartButton" onClick={handleAddToCart} disabled={!stock}>
+        Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+      </button>
 			<button className={`addToWishlistButton ${isWishlistActive ? 'active' : ''}`} onClick={handleAddToWishlist}>
 				<Heart size={25} />
 			</button>

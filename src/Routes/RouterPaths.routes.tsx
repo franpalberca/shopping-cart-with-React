@@ -12,6 +12,7 @@ import {AuthContextProvider} from '../config/context/AuthContext';
 import {WishlistPage} from '../Pages/wishlist/WishlistPage';
 import { FilterPage } from '../Pages/filter/FilterPage';
 import { ProductPage } from '../Pages/product/ProductPage';
+import { CheckoutPage } from '../Pages/checkout/CheckoutPage';
 
 export const RouterPaths = () => {
 	return (
@@ -27,6 +28,7 @@ export const RouterPaths = () => {
                             <Route path={WISHLIST} element={<WishlistPage />} />
 							<Route path={LOGIN} element={<LoginPage />} />
 							<Route path="/cart" element={<CartPage />} />
+                            <Route path="/checkout" element={<CheckoutPage />} />
 						</Route>
 						<Route path={PRIVATE} element={<PrivateRoute />}>
 							<Route index element={<HomePage />} />

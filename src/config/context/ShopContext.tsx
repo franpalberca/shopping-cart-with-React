@@ -1,45 +1,49 @@
 import {createContext, useState, useEffect} from 'react';
-import PRODUCTS from '../../../db.json';
 import {Product} from '../../Types/Products';
 import {ShopContextValue} from '../../Types/ShopContext';
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 export const ShopContext = createContext<ShopContextValue | null>(null);
 
-const getDefaultCart = () => {
-	let cart: {[key: number]: number} = {};
-	for (let i = 1; i <= PRODUCTS.length; i++) {
-		cart[i] = 0;
-	}
-	return cart;
-};
-
 export const ShopContextProvider = (props: {children: React.ReactNode}) => {
-	const [cartItems, setCartItems] = useState(getDefaultCart());
-
+	const [products, setProducts] = useState<Product[]>([]);
+	const [cartItems, setCartItems] = useState<{[key: number]: number}>({});
 	const [wishlistItems, setWishlistItems] = useState<number[]>([]);
-	const [products, setProducts] = useState();
-	const url = 'http://localhost:3004/PRODUCTS';
-	
-	const fetchProducts = async () => {
-		try {
-			const response = await fetch(url);
-			const data = await response.json();
-			setProducts(data);
-			console.log(data)
-		} catch (error) {
-			console.log(error);
-		}
-	};
+
 	useEffect(() => {
+		const fetchProducts = async () => {
+			try {
+				const response = await fetch(apiUrl);
+				const data = await response.json();
+				setProducts(data);
+				console.log(data);
+			} catch (error) {
+				console.log(error);
+			}
+		};
+
 		fetchProducts();
 	}, []);
+
+	const getDefaultCart = () => {
+		let cart: {[key: number]: number} = {};
+		for (let i = 1; i <= products?.length; i++) {
+			cart[i] = 0;
+		}
+		return cart;
+	};
+
+	useEffect(() => {
+		setCartItems(getDefaultCart());
+	}, [products]);
 
 	const getTotalCartAmount = () => {
 		let totalAmount = 0;
 		for (const item in cartItems) {
 			if (cartItems[item] > 0) {
-				let itemInfo = products.find((product: Product) => product.id === Number(item));
-				console.log(itemInfo)
+				let itemInfo = products?.find((product: Product) => product.id === Number(item));
+				console.log(itemInfo);
 				if (itemInfo) {
 					totalAmount += cartItems[item] * itemInfo.price;
 				}

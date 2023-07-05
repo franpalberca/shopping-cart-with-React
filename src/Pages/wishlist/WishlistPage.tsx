@@ -1,17 +1,33 @@
-import {useContext, useEffect, useState} from 'react';
+import {useContext, useState, useEffect} from 'react';
 import {ShopContext} from '../../config/context/ShopContext';
 import {Product} from '../../Types/Products';
-import {PRODUCTS} from '../../../db.json';
+
+const apiUrl = import.meta.env.VITE_API_URL;
 
 export const WishlistPage = () => {
 	const shopContext = useContext(ShopContext);
+	const [products, setProducts] = useState<Product[]>([]);
+	
+	const fetchProducts = async () => {
+		try {
+			const response = await fetch(apiUrl);
+			const data = await response.json();
+			setProducts(data);
+			console.log(data);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	useEffect(() => {
+		fetchProducts();
+	}, []);
 
 	if (!shopContext || !shopContext.wishlistItems || !shopContext.removeFromWishlist) {
 		return null;
 	}
 
 	const {wishlistItems, removeFromWishlist} = shopContext;
-	const [products, setProducts] = useState<Product[]>([]);
 
 	useEffect(() => {
 		const storedWishlistItems = localStorage.getItem('wishlistItems');
@@ -27,10 +43,7 @@ export const WishlistPage = () => {
 		localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
 	}, [wishlistItems]);
 
-	useEffect(() => {
-		const filteredProducts = PRODUCTS.filter((product: Product) => wishlistItems.includes(product.id));
-		setProducts(filteredProducts);
-	}, [wishlistItems]);
+	const filteredProducts = products.filter((product: Product) => wishlistItems.includes(product.id));
 
 	return (
 		<div>
@@ -39,7 +52,7 @@ export const WishlistPage = () => {
 				<p>Your wishlist is empty.</p>
 			) : (
 				<ul>
-					{products.map((product: Product) => (
+					{filteredProducts.map((product: Product) => (
 						<li key={product.id}>
 							<div>
 								<img src={product.img} alt={product.nameProduct} />

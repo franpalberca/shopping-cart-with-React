@@ -3,7 +3,7 @@ import {ProductItem} from '../../Components/Product/Product';
 // import './homepage.css';
 import {ReducerAction, ReducerState} from '../../Types/Products';
 
-const url = 'http://localhost:3004/PRODUCTS';
+const apiUrl = import.meta.env.VITE_API_URL;
 
 export const FilterPage = () => {
 	const reducer = (state: ReducerState, action: ReducerAction): ReducerState => {
@@ -26,7 +26,7 @@ export const FilterPage = () => {
 
 	const fetchProducts = async () => {
 		try {
-			const response = await fetch(url);
+			const response = await fetch(apiUrl);
 			const data = await response.json();
 			dispatch({type: 'SET_PRODUCTS', payload: data});
 		} catch (error) {

@@ -10,6 +10,7 @@ export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 	const [products, setProducts] = useState<Product[]>([]);
 	const [cartItems, setCartItems] = useState<{[key: number]: number}>({});
 	const [wishlistItems, setWishlistItems] = useState<number[]>([]);
+	const [selectedItems, setSelectedItems] = useState([])
 
 	useEffect(() => {
 		const fetchProducts = async () => {
@@ -17,7 +18,6 @@ export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 				const response = await fetch(apiUrl);
 				const data = await response.json();
 				setProducts(data);
-				console.log(data);
 			} catch (error) {
 				console.log(error);
 			}
@@ -54,7 +54,6 @@ export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 		for (const item in cartItems) {
 			if (cartItems[item] > 0) {
 				let itemInfo = products?.find((product: Product) => product.id === Number(item));
-				console.log(itemInfo);
 				if (itemInfo) {
 					totalAmount += cartItems[item] * itemInfo.price;
 				}
@@ -105,7 +104,7 @@ export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 		setWishlistItems((prevItems) => prevItems.filter((item) => item !== itemId));
 	};
 
-	const checkout = () => {
+	const handleBackToHomePage = () => {
 		setCartItems(getDefaultCart());
 	};
 
@@ -116,7 +115,9 @@ export const ShopContextProvider = (props: {children: React.ReactNode}) => {
 		updateCartItemCount,
 		removeFromCart,
 		getTotalCartAmount,
-		checkout,
+		handleBackToHomePage,
+		selectedItems,
+		setSelectedItems,
 		wishlistItems,
 		setWishlistItems,
 		addToWishlist,

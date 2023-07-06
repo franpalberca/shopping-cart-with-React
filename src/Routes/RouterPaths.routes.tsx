@@ -34,7 +34,7 @@ export const RouterPaths = () => {
 						</Route>
 						<Route path={PRIVATE} element={<PrivateRoute />}>
 							<Route index element={<HomePage />} />
-							
+
                             {/* <Route path={FILTERPAGE} element={<FilterPage />} /> */}
 							{/* <Route index element={<Private />}/> */}
 							<Route path={LOGOUT} element={<Logout />} />

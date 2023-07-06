@@ -5,6 +5,7 @@ import {ShopContext} from '../../config/context/ShopContext';
 import {Heart} from 'phosphor-react';
 import './productpage.css';
 import { Product } from '../../Types/Products';
+import { Footer } from '../../Components/Footer/Footer';
 
 export const ProductPage = () => {
 	const {id} = useParams();
@@ -20,7 +21,6 @@ export const ProductPage = () => {
 			const response = await fetch(apiUrl);
 			const data = await response.json();
 			setProducts(data);
-			console.log(data);
 		} catch (error) {
 			console.log(error);
 		}
@@ -77,6 +77,7 @@ export const ProductPage = () => {
 			<button className={`addToWishlistButton ${isWishlistActive ? 'active' : ''}`} onClick={handleAddToWishlist}>
 				<Heart size={25} />
 			</button>
+            <Footer />
 		</div>
 	);
 };

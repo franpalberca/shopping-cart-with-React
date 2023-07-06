@@ -12,7 +12,7 @@ export const ProductItem = (props: CartItemProps) => {
 		return null;
 	}
 
-	const {cartItems, addToCart, removeFromCart, updateCartItemCount, wishlistItems, addToWishlist, removeFromWishlist} = shopContext;
+	const {cartItems, selectedItems, setSelectedItems, addToCart, removeFromCart, updateCartItemCount, wishlistItems, addToWishlist, removeFromWishlist} = shopContext;
 
 	const cartItemCount = cartItems[id];
 	const isCartActive = cartItemCount > 0;
@@ -21,6 +21,8 @@ export const ProductItem = (props: CartItemProps) => {
 	const handleAddToCart = () => {
 		if (props.data.stock) {
 			addToCart(id);
+			setSelectedItems((prevItems) => [...prevItems, id]);
+			localStorage.setItem('selectedItems', JSON.stringify([...selectedItems, id]))
 		}
 	};
 
@@ -47,7 +49,7 @@ export const ProductItem = (props: CartItemProps) => {
 				</p>
 				<p>${price}</p>
 			</div>
-			<button className={`addToCartButton ${isCartActive ? 'active' : ''}`} onClick={handleAddToCart} disabled={!props.data.stock}>
+			<button className={`addToCartButton ${isCartActive ? 'active' : ''}`} onClick={handleAddToCart}>
 				Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
 			</button>
 			<button className={`addToWishlistButton ${isWishlistActive ? 'active' : ''}`} onClick={handleAddToWishlist}>

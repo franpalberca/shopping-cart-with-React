@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import './checkoutpage.css';
 import { Link } from 'react-router-dom';
+import { Footer } from '../../Components/Footer/Footer';
 
 export const CheckoutPage = () => {
 	const [formData, setFormData] = useState({
@@ -48,7 +49,6 @@ export const CheckoutPage = () => {
 
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		console.log(formData);
 	};
 
 	const isFormValid = Object.values(formData).every((value) => value !== '');
@@ -117,6 +117,7 @@ export const CheckoutPage = () => {
 					</div>
 				</form>
 			</div>
+            <Footer />
 		</div>
 	);
 };

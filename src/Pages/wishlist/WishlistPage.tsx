@@ -13,7 +13,6 @@ export const WishlistPage = () => {
 			const response = await fetch(apiUrl);
 			const data = await response.json();
 			setProducts(data);
-			console.log(data);
 		} catch (error) {
 			console.log(error);
 		}

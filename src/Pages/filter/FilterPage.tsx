@@ -2,6 +2,7 @@ import {useEffect, useReducer} from 'react';
 import {ProductItem} from '../../Components/Product/Product';
 // import './homepage.css';
 import {ReducerAction, ReducerState} from '../../Types/Products';
+import { Footer } from '../../Components/Footer/Footer';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -61,6 +62,7 @@ export const FilterPage = () => {
 					<ProductItem key={product.id} data={product} />
 				))}
 			</div>
+            <Footer />
 		</div>
 	);
 };

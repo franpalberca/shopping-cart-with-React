@@ -1,0 +1,27 @@
+.filterButtons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	flex-direction: row;
+}
+
+.filterButtons button {
+	margin: 20px;
+	width: 120px;
+	background-color: transparent;
+	border: 2px solid black;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+}
+
+.product.outOfStock {
+	opacity: 1;
+}
+
+.product .outOfStockImage {
+	filter: brightness(40%);
+}

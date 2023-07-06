@@ -1,0 +1,92 @@
+.productDetail {
+	border: 1px solid black;
+	border-radius: 25px;
+	width: 170vh;
+	display:flex;
+	align-items: start;
+	text-align: center;
+	flex-direction: column;
+	margin-left: 25vh;
+}
+
+.productDetail h3 {
+	width: 100%;
+	align-items: center;
+	text-align: center;
+}
+
+.productGrid {
+	display: grid;
+	grid-template-columns: 25vh, 75vh;
+}
+.productDetail img {
+	align-items: center;
+	grid-column: 1/2;
+}
+
+.descriptionProduct {
+	grid-column: 2/3;
+	display: grid;
+	grid-template-rows: auto auto;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.productDetail h3 {
+	align-items: center;
+	text-align: center;
+}
+
+.buttonsProduct {
+	grid-column: 2/3;
+}
+
+
+
+.addToCartButton {
+	background-color: transparent;
+	border: 2px solid black;
+	min-width: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+}
+
+.addToWishlistButton {
+	background-color: transparent;
+	border: 2px solid black;
+	min-width: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+}
+
+.addToCartButton:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.addToWishlistButton:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.addToWishlistButton.active {
+	color: black;
+	background-color: red;
+}
+
+.outOfStock {
+	opacity: 1;
+}
+
+.outOfStockImage {
+	filter: brightness(40%);
+}
+

@@ -1,5 +1,5 @@
 .containerWhole {
-	height: 72vh;
+	height: 75vh;
 }
 
 .containerLogin {
@@ -28,4 +28,21 @@
 
 .formItemLogin {
 	margin-bottom: 10px;
+}
+
+.formGridLogin button {
+	background-color: transparent;
+	border: 2px solid black;
+	min-width: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+}
+
+.formGridLogin button:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer; 	
 }

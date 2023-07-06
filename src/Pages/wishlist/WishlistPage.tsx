@@ -48,31 +48,25 @@ export const WishlistPage = () => {
 
 	return (
 		<>
-			<h2 className="wishTitle">Wishlist</h2>
-			{wishlistItems.length === 0 ? (
-				<p className="wishEmpty">Your wishlist is empty.</p>
-			) : (
-				<div className="wishProduct">
-					{filteredProducts.map((product: Product) => (
-						<div className='wishItems'>
-							<div  key={product.id}>
-								<div >
-								<h3 className='wishProductTitle'><b>{product.nameProduct}</b></h3>
-									<img className='wishProductImg'src={product.img} alt={product.nameProduct} />
-									<div className='wishProductBottom'>
-									<b>
-										<span>{product.price}€</span>
-									</b>
-
-									<button onClick={() => removeFromWishlist(product.id)}>Remove</button>
-									</div>
-								</div>
+        <div>
+            <h2 className='wishTitle'>Wishlist</h2>
+            {wishlistItems.length === 0 ? (
+                <p>Your wishlist is empty.</p>
+            ) : (
+                <ul style={{display:'grid', gridTemplateColumns:'1fr 1fr 1fr'}}>
+                    {filteredProducts.map((product: Product) => (
+                        <li style={{listStyle:'none'}} key={product.id}>
+                            <div className="wishItems">
+							<h3 className='wishProductTitle'>{product.nameProduct}</h3>
+                                <img className='wishProductImg'src={product.img} alt={product.nameProduct} />
+                            <button onClick={() => removeFromWishlist(product.id)}>Remove</button>
 							</div>
-						</div>
-					))}
-				</div>
-			)}
-			<Footer />
+						</li>
+                    ))}
+                </ul>
+            )}
+        </div>
+		<Footer />
 		</>
-	);
+    );
 };

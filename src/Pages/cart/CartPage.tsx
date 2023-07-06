@@ -5,7 +5,7 @@ import './cart.css';
 import {ShopContext} from '../../config/context/ShopContext';
 import {ShopContextValue} from '../../Types/ShopContext';
 import {Product} from '../../Types/Products';
-import { Footer } from '../../Components/Footer/Footer';
+import {Footer} from '../../Components/Footer/Footer';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -42,35 +42,35 @@ export const CartPage = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="cart">
-			<div>
-				<h1>Your Cart Items</h1>
-			</div>
-			<div className="cart">
-				{products.map((product) => {
-					if (cartItems[product.id] && cartItems[product.id] > 0) {
-						return <CartItem key={product.id} data={product} />;
-					}
-					return null;
-				})}
-			</div>
-
-			{totalAmount > 0 ? (
-				<div className="checkout">
-					<p> Subtotal: ${totalAmount.toFixed(2)} </p>
-					<button onClick={() => navigate('/')}> Continue Shopping </button>
-					<button
-						onClick={() => {
-							navigate('/checkout');
-						}}>
-						{' '}
-						Checkout{' '}
-					</button>
+		<>
+    <h1 className='cartTitle'>Your Cart Items</h1>
+			<div className="cartWhole">
+				<div className="product">
+					{products.map((product) => {
+						if (cartItems[product.id] && cartItems[product.id] > 0) {
+							return <CartItem key={product.id} data={product} />;
+						}
+						return null;
+					})}
 				</div>
-			) : (
-				<h1> Your Shopping Cart is Empty</h1>
-			)}
-      <Footer />
-		</div>
+
+				{totalAmount > 0 ? (
+					<div className="checkout">
+						<p> Subtotal: {totalAmount.toFixed(2)}€ </p>
+						<button onClick={() => navigate('/')}> Continue Shopping </button>
+						<button
+							onClick={() => {
+								navigate('/checkout');
+							}}>
+							{' '}
+							Checkout{' '}
+						</button>
+					</div>
+				) : (
+					<h1 className="cartEmpty"> Your Shopping Cart is Empty</h1>
+				)}
+			</div>
+			<Footer />
+		</>
 	);
 };

@@ -2,6 +2,7 @@ import {useContext} from 'react';
 import {ShopContext} from '../../config/context/ShopContext';
 import {CartItemProps} from '../../Types/Products';
 import {ShopContextValue} from '../../Types/ShopContext';
+import './cartitem.css'
 
 export const CartItem = (props: CartItemProps) => {
 	const {id, nameProduct, price, img} = props.data;

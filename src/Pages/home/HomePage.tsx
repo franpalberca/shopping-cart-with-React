@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import {ProductItem} from '../../Components/Product/Product.tsx';
 import './homepage.css';
+import {Footer} from '../../Components/Footer/Footer.tsx';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -21,16 +22,15 @@ export const HomePage = () => {
 	}, []);
 
 	return (
-		<div className="shop">
-			<div className="shopTitle">
-				<h1>FRAN'S E-COMMERCE</h1>
+		<>
+			<div className="shop">
+				<div className="products">
+					{products.map((product) => (
+						<ProductItem key={product.id} data={product} />
+					))}
+				</div>
 			</div>
-
-			<div className="products">
-				{products.map((product) => (
-					<ProductItem key={product.id} data={product} />
-				))}
-			</div>
-		</div>
+			<Footer />
+		</>
 	);
 };

@@ -1,8 +1,8 @@
 import {useEffect, useReducer} from 'react';
 import {ProductItem} from '../../Components/Product/Product';
-// import './homepage.css';
+import './filterpage.css';
 import {ReducerAction, ReducerState} from '../../Types/Products';
-import { Footer } from '../../Components/Footer/Footer';
+import {Footer} from '../../Components/Footer/Footer';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -44,25 +44,22 @@ export const FilterPage = () => {
 	};
 
 	return (
-		<div className="shop">
-			<div className="shopTitle">
-				<h1>FRAN'S E-COMMERCE</h1>
-			</div>
-
+		<>
 			<div className="filterButtons">
-				<button onClick={() => filterProducts(1)}>1-10</button>
-				<button onClick={() => filterProducts(11)}>11-20</button>
-				<button onClick={() => filterProducts(21)}>21-30</button>
-				<button onClick={() => filterProducts(31)}>31-40</button>
-				<button onClick={() => filterProducts(41)}>41-50</button>
+				<button onClick={() => filterProducts(1)}>1-10€</button>
+				<button onClick={() => filterProducts(11)}>11-20€</button>
+				<button onClick={() => filterProducts(21)}>21-30€</button>
+                <button onClick={() => filterProducts(31)}>31-40€</button>
+                <button onClick={() => filterProducts(41)}>41-50€</button>
 			</div>
-
-			<div className="products">
-				{state.filteredProducts.map((product) => (
-					<ProductItem key={product.id} data={product} />
-				))}
+			<div className="shop">
+				<div className="products">
+					{state.filteredProducts.map((product) => (
+						<ProductItem key={product.id} data={product} />
+					))}
+				</div>
 			</div>
-            <Footer />
-		</div>
+			<Footer />
+		</>
 	);
 };

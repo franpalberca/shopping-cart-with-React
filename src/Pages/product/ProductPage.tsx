@@ -4,8 +4,8 @@ import {ShopContextValue} from '../../Types/ShopContext';
 import {ShopContext} from '../../config/context/ShopContext';
 import {Heart} from 'phosphor-react';
 import './productpage.css';
-import { Product } from '../../Types/Products';
-import { Footer } from '../../Components/Footer/Footer';
+import {Product} from '../../Types/Products';
+import {Footer} from '../../Components/Footer/Footer';
 
 export const ProductPage = () => {
 	const {id} = useParams();
@@ -62,22 +62,34 @@ export const ProductPage = () => {
 	};
 
 	return (
-		<div className={`productPage ${!stock ? 'outOfStock' : ''}`}>
-			<h2>Product Details</h2>
-			<h3>{nameProduct}</h3>
-			<img src={img} alt={nameProduct} className={!stock ? 'outOfStockImage' : ''} />
-			<p>Price: ${price}</p>
-			<b>
-				<p style={stockStyle}>{stockText}</p>
-			</b>
-			<p>{description}</p>
-			<button className="addToCartButton" onClick={handleAddToCart} disabled={!stock}>
-				Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
-			</button>
-			<button className={`addToWishlistButton ${isWishlistActive ? 'active' : ''}`} onClick={handleAddToWishlist}>
-				<Heart size={25} />
-			</button>
-            <Footer />
-		</div>
+		<>
+			<div className={`productPage ${!stock ? 'outOfStock' : ''}`}>
+				<h2>Product Details</h2>
+				<div className="productDetail">
+					<h3>{nameProduct}</h3>
+					<div className="productGrid">
+						<img src={img} alt={nameProduct} className={!stock ? 'outOfStockImage' : ''} />
+						<div className="descriptionProduct">
+							<b>
+								<p>{description}</p>
+							</b>
+							<p>Price: ${price}</p>
+							<b>
+								<p style={stockStyle}>{stockText}</p>
+							</b>
+						</div>
+						<div className="buttonsProduct">
+							<button className="addToCartButton" onClick={handleAddToCart} disabled={!stock}>
+								Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+							</button>
+							<button className={`addToWishlistButton ${isWishlistActive ? 'active' : ''}`} onClick={handleAddToWishlist}>
+								<Heart size={20} />
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<Footer />
+		</>
 	);
 };

@@ -1,4 +1,8 @@
-.containerCheckout {
+.containerWhole {
+	height: 72vh;
+}
+
+.containerLogin {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -6,28 +10,22 @@
 	padding: 20px;
 	max-width: 500px;
     margin: 0 auto;
-	height: 350px;
-	margin-bottom: 15px;
-	border-radius: 25px;
 }
 
-.title {
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.titleLogin {
+	text-align: center;
 }
 
-.form {
+.formLogin {
 	max-width: 350px;
 }
 
-.formGrid {
+.formGridLogin {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 10px;
 }
 
-.formItem {
+.formItemLogin {
 	margin-bottom: 10px;
 }

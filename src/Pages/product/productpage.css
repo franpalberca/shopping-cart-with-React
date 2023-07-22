@@ -1,3 +1,8 @@
+.productPage h2 {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
 .productDetail {
 	border: 1px solid black;
 	border-radius: 25px;
@@ -7,6 +12,7 @@
 	text-align: center;
 	flex-direction: column;
 	margin-left: 25vh;
+	margin-bottom: 20px;
 }
 
 .productDetail h3 {
@@ -22,6 +28,7 @@
 .productDetail img {
 	align-items: center;
 	grid-column: 1/2;
+	margin-left: 10px
 }
 
 .descriptionProduct {
@@ -32,10 +39,10 @@
 	margin-bottom: 20px;
 }
 
-.productDetail h3 {
+/* .productDetail h3 {
 	align-items: center;
 	text-align: center;
-}
+} */
 
 .buttonsProduct {
 	grid-column: 2/3;
@@ -52,6 +59,7 @@
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border-radius: 15px;
+	margin-bottom: 10px;
 }
 
 .addToWishlistButton {

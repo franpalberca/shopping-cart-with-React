@@ -1,0 +1,69 @@
+.lastPageTitle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lastPageWhole {
+	border: 1px solid black;
+	border-radius: 25px;
+	width: 127vh;
+	display: flex;
+	align-items: start;
+	text-align: center;
+	flex-direction: column;
+	margin-left: 25vh;
+	margin-bottom: 20px;
+}
+
+.lastPageMap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lastPageMapItem {
+	display: grid;
+	grid-template-columns: 25vh, 25vh;
+}
+
+.lastPageMap img {
+	align-items: center;
+	grid-column: 1/2;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.lastPageMap p {
+	grid-column: 2/3;
+	display: grid;
+	grid-template-rows: auto auto;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	margin-right: 15px;
+}
+
+.backToMainDiv {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.backToMainPageButton {
+	background-color: transparent;
+	border: 2px solid black;
+	min-width: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+}
+
+.backToMainPageButton:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}

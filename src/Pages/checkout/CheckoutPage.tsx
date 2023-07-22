@@ -1,7 +1,9 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import './checkoutpage.css';
 import {Link} from 'react-router-dom';
 import {Footer} from '../../Components/Footer/Footer';
+import { AuthContext } from '../../config/context/AuthContext';
+import { THANKYOUPAGE } from '../../config/routes/paths';
 
 export const CheckoutPage = () => {
 	const [formData, setFormData] = useState({
@@ -26,6 +28,10 @@ export const CheckoutPage = () => {
 			}));
 		}
 	}, []);
+
+	const authContext = useContext(AuthContext);
+
+	const {isAuthenticated} = authContext;
 
 	useEffect(() => {
 		localStorage.setItem('formData', JSON.stringify(formData));
@@ -111,11 +117,18 @@ export const CheckoutPage = () => {
 									<input type="text" name="creditCard" value={formData.creditCard} onChange={handleInputChange} placeholder="XXXX-XXXX-XXXX-XXXX" required />
 								</label>
 							</div>
-							<Link to={'/thankyoupage'}>
+							{/* {isAuthenticated ? (
+								<Link to='/private/thankyoupage'>
 								<button type="submit" disabled={!isFormValid}>
 									Pay
 								</button>
 							</Link>
+							) : ( */}
+							<Link to={THANKYOUPAGE}>
+							<button type="submit" disabled={!isFormValid}>
+								Pay
+							</button>
+						</Link>
 						</div>
 					</form>
 				</div>

@@ -37,6 +37,7 @@ export const RouterPaths = () => {
 							<Route path={WISHLIST} element={<WishlistPage />} />
                             <Route path='/private/product/:id' element={<ProductPage />} />
                             <Route path='/private/filterpage' element={<FilterPage />} />
+							<Route path='/private/yourpurchase' element={<ThankYouPage />} />
 							<Route path={LOGOUT} element={<Logout />} />
                             <Route path='/private/mycart' element={<CartPage />}/>
 						</Route>
